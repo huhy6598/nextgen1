@@ -4,9 +4,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
-    margin: 0;
-    background-image: url("background.jpg");
+body {
+   margin: 0;
+    background-image: url("/Đăng ký/image/background.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;   /* QUAN TRỌNG */
@@ -45,7 +45,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 40px;
     padding: 20px 45px 20px 20px;
 }
@@ -199,36 +199,4 @@ ul{
 }
 .playstore{
     margin-bottom: 100px;
-}
-
-
-.gg {
-    width: 50px; /* Chỉ vừa logo */
-    height: 50px;
-    background: transparent;
-    backdrop-filter: blur(20px);
-    color: transparent; /* Ẩn chữ */
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; 
-    position: relative;
-    transition: 0.3s;
-    border: none; /* bỏ viền */
-    outline: none; /* bỏ viền khi focus */
-    box-shadow: none; /* bỏ đổ bóng */
-}
-
-.gg img {
-    width: 50px;
-    height: 50px;
-}
-
-/* Khi hover thì background nhạt đi */
-.gg {
-    background: rgba(255,255,255,0.1);
 }
