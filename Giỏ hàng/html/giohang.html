@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Tên của trang web -->
+        <title>SPCK-JSB49</title>
+        <link rel="stylesheet" href="/Giỏ hàng/css/giohang.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="container2">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/Giỏ hàng/image/logo.png" width="200px">
+                </div>
+                <nav>
+                  <ul>
+                      <li><a href="/Trang chủ/trangchu.html">Home</a></li>
+                      <li><a href="/Thông tin/tt.html">About</a></li>
+                      <li><a href="/Liên hệ/lh.html">Contact</a></li>
+                      <li><a href="/Đăng nhập , đăng ký/Đăng ký/dangky.html">Account</a></li>
+                      <li><a href="/Thời tiết/tt.html">Weather</a></li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+     <div class="cart-page">
+
+    <!-- Cột trái -->
+    <div class="cart-left">
+
+        <h2 class="cart-title">GIỎ HÀNG CỦA TÔI</h2>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="cart-items" class="cart-items"></div>
+
+        <!-- Gợi ý thêm -->
+        <div class="suggest-box">
+            <h3>SẼ NGON HƠN KHI THƯỞNG THỨC CÙNG...</h3>
+
+            <div class="suggest-list">
+                <div class="suggest-item">
+                    <img src="/danh mục/image/sauce.jpg">
+                    <span>Xốt phô mai</span>
+                    <p>5.000đ</p>
+                    <button>+</button>
+                </div>
+
+                <div class="suggest-item">
+                    <img src="/danh mục/image/fries.jpg">
+                    <span>Khoai tây chiên</span>
+                    <p>19.000đ</p>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cột phải -->
+    <div class="cart-right">
+        <h3>1 MÓN</h3>
+
+        <div class="coupon">
+            <p>Bạn có mã giảm giá?</p>
+            <input placeholder="Mã giảm giá">
+            <button>Áp dụng</button>
+        </div>
+
+        <div class="price-box">
+            <div>
+                <span>Tổng đơn hàng</span>
+                <span id="cart-total">0đ</span>
+            </div>
+            <div class="total">
+                <span>Tổng thanh toán</span>
+                <span id="cart-total-final">0đ</span>
+            </div>
+        </div>
+
+        <button class="checkout-btn">
+            Thanh toán <span id="checkout-price">0đ</span>
+        </button>
+    </div>
+
+</div>
+   
+    </div>
+    <div class="footer">
+        <div class="c3">
+             <div class="row">
+                 <div class="footer-col-1">
+                     <h3>Download our app</h3>
+                     <p>Download App for Android and Ios mobile phone</p>
+                     <div class="app-logo">
+                         <img class="playstore" src="/Giỏ hàng/image/play-store-logo-33874.png" width="140px">
+                         <img class="appstore" src="/Giỏ hàng/image/app-store-png-logo-33116.png" width="200px">
+                     </div>
+                 </div>
+                 <div class="footer-col-2">
+                     <img src="/Giỏ hàng/image/logo.png" width="300px">
+                     <p>Our purpose is to sutainanly make the pleasure</p>
+                 </div>
+                 <div class="footer-col-3">
+                     <h3>Useful links</h3>
+                     <ul>
+                         <li>Coupons</li>
+                         <li>Blog post</li>
+                         <li>Return Policy</li>
+                         <li>Join Affiliate</li>
+                     </ul>
+                 </div>
+                 <div class="footer-col-4">
+                     <h3>Follow us</h3>
+                     <ul>
+                         <li>Facebook</li>
+                         <li>Twitter</li>
+                         <li>Instargram</li>
+                         <li>Youtube</li>
+                     </ul>
+                 </div>
+        </div>
+    </div>
+   </div>      
+    </body>
+    <script src="/Giỏ hàng/js/giohang.js"></script>
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, onValue, update, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAM97h4SZzzqF-mCbcnqQGk4zVjPFvtvy8",
+  authDomain: "fir-893ff.firebaseapp.com",
+  databaseURL: "https://fir-893ff-default-rtdb.firebaseio.com",
+  projectId: "fir-893ff",
+  storageBucket: "fir-893ff.firebasestorage.app",
+  messagingSenderId: "583333167187",
+  appId: "1:583333167187:web:c3cc99f7631411cdd0c6a6"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const cartRef = ref(db, "cart/user1");
+
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+onValue(cartRef, snapshot => {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (!snapshot.exists()) {
+        cartItems.innerHTML = "<p>Giỏ hàng trống</p>";
+        cartTotal.innerText = "0";
+        return;
+    }
+
+    snapshot.forEach(child => {
+        const item = child.val();
+        total += item.price * item.quantity;
+
+        cartItems.innerHTML += `
+            <div style="display:flex; gap:15px; margin-bottom:15px">
+                <img src="${item.image}" width="80">
+                <div>
+                    <h4>${item.name}</h4>
+                    <p>${item.price.toLocaleString()} đ</p>
+                    <button onclick="updateQty('${child.key}', ${item.quantity - 1})">-</button>
+                    ${item.quantity}
+                    <button onclick="updateQty('${child.key}', ${item.quantity + 1})">+</button>
+                    <button onclick="removeItem('${child.key}')">❌</button>
+                </div>
+            </div>
+        `;
+    });
+
+    cartTotal.innerText = total.toLocaleString();
+});
+
+window.updateQty = function(id, qty) {
+    if (qty <= 0) {
+        remove(ref(db, "cart/user1/" + id));
+    } else {
+        update(ref(db, "cart/user1/" + id), { quantity: qty });
+    }
+}
+
+window.removeItem = function(id) {
+    remove(ref(db, "cart/user1/" + id));
+}
+
+window.goBack = function() {
+    window.history.back();
+}
+</script>
+</html>

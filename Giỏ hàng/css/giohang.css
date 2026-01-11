@@ -1,0 +1,250 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+
+}
+.header{
+    background: 
+        #ffffff 
+}
+.container{
+    max-width:  3000px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.header .row{
+    margin-top: 50px;
+}
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    margin-top: 100px;
+}
+
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+     min-width: 250px;
+     margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.footer-col-3 li, .footer-col-4 li{
+    color: #8a8a8a;
+}
+ul{
+    list-style-type: none;
+}
+
+.appstore{
+    margin-bottom: 90px;
+
+    margin-left: 10px;
+}
+.playstore{
+    margin-bottom: 100px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.pic{
+    width: 500px;
+}
+.cart-page {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #f8f8f8;
+    height: 700px;
+}
+
+/* CỘT TRÁI */
+.cart-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-item img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.cart-info h4 {
+    margin-bottom: 6px;
+}
+
+.cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-actions button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* GỢI Ý */
+.suggest-box {
+    margin-top: 30px;
+    background: #2c2c2c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.suggest-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.suggest-item {
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.suggest-item button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+
+/* CỘT PHẢI */
+.cart-right {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.coupon input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.coupon button {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.price-box {
+    margin-top: 20px;
+}
+
+.price-box div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.checkout-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: #e4002b;
+    color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+}

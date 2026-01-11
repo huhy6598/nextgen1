@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Tên của trang web -->
+        <title>Trang chủ</title>
+        <link rel="stylesheet" href="./trangchu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+       <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" width="300px">
+                </div>
+                <div class="search-bar">
+                    <form action="#" method="get">
+                        <input id="searchInput" type="text" placeholder="Search..." />
+                        <button id="searchBtn" type="button"><i class='bx bx-search'></i></button>
+                    </form>
+                    <div id="searchResults"></div> <!-- Vùng hiển thị kết quả tìm kiếm -->
+                </div>                
+                <nav>
+                  <ul>
+                      <li><a href="">Home</a></li>
+                      <li><a href="/Thông tin/tt.html">About</a></li>
+                      <li><a href="/Liên hệ/lh.html">Contact</a></li>
+                      <li><a href="/Đăng nhập , đăng ký/Đăng ký/dangky.html">Account</a></li>
+                      <li><a href="/Thời tiết/tt.html">Weather</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <div class="slider">
+    <div class="slides">
+        <img src="banner1.png" class="slide active" >
+        <img src="banner2.png" class="slide">
+        <img src="banner3.png" class="slide">
+        
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+     </div>
+
+            </div>
+        </div>
+      </div>
+
+
+      
+      <div class="small-container2" id="section1">
+        <div class="product-section">
+    <h2 class="title">Combo Ưu Đãi</h2>
+
+    <div class="product-grid">
+
+        <!-- CARD -->
+        <div class="product-card">
+            <img src="combo1.jpg" class="product-img">
+
+            <h3 class="product-name">Combo Cùng Vui</h3>
+
+            <div class="product-price">
+                <span class="price-new">180.000đ</span>
+                <span class="price-old">205.000đ</span>
+            </div>
+
+            <p class="product-desc">
+                Combo 6 miếng gà rán + tặng 3 lon Pepsi
+            </p>
+
+            <button class="btn-add">Thêm</button>
+        </div>
+
+        <!-- CARD -->
+        <div class="product-card">
+            <img src="combo2.jpg" class="product-img">
+
+            <h3 class="product-name">Combo Cùng Tiệc</h3>
+
+            <div class="product-price">
+                <span class="price-new">245.000đ</span>
+                <span class="price-old">300.000đ</span>
+            </div>
+
+            <p class="product-desc">
+                Combo 7 miếng gà + 2 miếng gà rán + 3 ly Pepsi
+            </p>
+
+            <button class="btn-add">Thêm</button>
+        </div>
+         <div class="product-card">
+            <img src="combo1.jpg" class="product-img">
+
+            <h3 class="product-name">Combo Cùng Vui</h3>
+
+            <div class="product-price">
+                <span class="price-new">180.000đ</span>
+                <span class="price-old">205.000đ</span>
+            </div>
+
+            <p class="product-desc">
+                Combo 6 miếng gà rán + tặng 3 lon Pepsi
+            </p>
+
+            <button class="btn-add">Thêm</button>
+        </div>
+         <div class="product-card">
+            <img src="combo1.jpg" class="product-img">
+
+            <h3 class="product-name">Combo Cùng Vui</h3>
+
+            <div class="product-price">
+                <span class="price-new">180.000đ</span>
+                <span class="price-old">205.000đ</span>
+            </div>
+
+            <p class="product-desc">
+                Combo 6 miếng gà rán + tặng 3 lon Pepsi
+            </p>
+
+            <button class="btn-add">Thêm</button>
+        </div>
+
+    </div>
+</div>
+<div class="category-section">
+    <h2 class="category-title">DANH MỤC MÓN ĂN</h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <a href="/Thông tin sản phẩm/Đồ ăn/banhmi.html">
+            <img src="garan.jpg"></a>
+            <p>Gà Rán - Gà Quay ›</p>
+        </div>
+
+        <div class="category-card">
+            <img src="burger.jpg">
+            <p>Bánh mì ›</p>
+        </div>
+
+        <div class="category-card">
+            <img src="thucannhe.jpg">
+            <p>Thức Ăn Nhẹ ›</p>
+        </div>
+
+        <div class="category-card">
+            <img src="trangmieng.jpg">
+            <p>Đồ uống›</p>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+      </div>
+      <div class="testimonial">
+           <div class="small-container2">
+                <div class="row">
+                    <div class="col-3">
+                        <i class='bx bxs-quote-left'></i>
+                        <p>Theo cảm nhận của tôi thì đồ uống ở đây khá ngon
+                           không gian quán sạch sẽ , thoáng mát , khi gọi mang về thì giao hàng
+                           nhanh </p>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star' ></i>
+                        </div>
+                        <img src="p1.jpg">
+                        <h3>Nguyễn Thái An</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class='bx bxs-quote-left'></i>
+                        <p>Dịch vụ tốt , đồ uống ngon và mát , 
+                            không gian làm việc rất yên tĩnh và sạch sẽ
+                            chắc chắn lần sau tôi sẽ quay lại </p>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star' ></i>
+                        </div>
+                        <img src="p2.jpg">
+                        <h3>Trần Bảo Uyên</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class='bx bxs-quote-left'></i>
+                        <p>Là 1 người thường xuyên làm việc ở quán cà phê 
+                            thì tôi thấy không gian rất phù hợp , còn dc gửi xe miễn 
+                            phí , đồ uống mà tôi rất thích ở đây chính là cà phê trứng </p>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star' ></i>
+                        </div>
+                        <img src="p3.jpg">
+                        <h3>Phạm Thành Trung</h3>
+                    </div>
+                </div>
+           </div>
+      </div>
+      <div class="brands">
+           <div class="small-container2">
+                <div class="row">
+                    <div class="col-5">
+                        <a href="https://food.grab.com/vn/vi/">
+                        <img src="grab-removebg-preview.png">
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <a href="https://gofood.vn/">
+                        <img src="gojek-removebg-preview.png">
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <a href="https://shopeefood.vn/">
+                        <img src="shoppe-removebg-preview.png">
+                        </a>
+                    </div>
+                </div>
+           </div>
+      </div>
+      
+
+      <div class="footer">
+           <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our app</h3>
+                        <p>Download App for Android and Ios mobile phone</p>
+                        <div class="app-logo">
+                            <img class="playstore" src="play-store-logo-33874.png" width="140px">
+                            <img class="appstore" src="app-store-png-logo-33116.png" width="200px">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="logo.png" width="300px">
+                        <p>Our purpose is to sutainanly make the pleasure</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instargram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+      </div>
+    </body>
+    <script src="timkiem.js"></script>
+    <script src="slider.js"></script>
+</html>
