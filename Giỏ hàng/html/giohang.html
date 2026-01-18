@@ -42,17 +42,29 @@
 
             <div class="suggest-list">
                 <div class="suggest-item">
-                    <img src="/danh mục/image/sauce.jpg">
+                    <img src="/Giỏ hàng/image/phomai.jpg">
                     <span>Xốt phô mai</span>
                     <p>5.000đ</p>
-                    <button>+</button>
+                    <button onclick="addSuggestItem(
+    'sot_phomai',
+    'Xốt phô mai',
+    5000,
+    '/Giỏ hàng/image/phomai.jpg'
+)">+</button>
+
                 </div>
 
                 <div class="suggest-item">
-                    <img src="/danh mục/image/fries.jpg">
+                    <img src="/danh mục/image/khoaitay.jpg">
                     <span>Khoai tây chiên</span>
-                    <p>19.000đ</p>
-                    <button>+</button>
+                    <p>10.000đ</p>
+                             <button onclick="addSuggestItem(
+    'khoaitaychien1',
+    'Khoai tây chiên',
+    10000,
+    '/danh mục/image/khoaitay.jpg'
+)">+</button>
+
                 </div>
             </div>
         </div>
@@ -125,10 +137,9 @@
     </div>
    </div>      
     </body>
-    <script src="/Giỏ hàng/js/giohang.js"></script>
     <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, onValue, update, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, onValue, update, remove, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAM97h4SZzzqF-mCbcnqQGk4zVjPFvtvy8",
@@ -176,7 +187,10 @@ onValue(cartRef, snapshot => {
         `;
     });
 
-    cartTotal.innerText = total.toLocaleString();
+    cartTotal.innerText = total.toLocaleString() + "đ";
+document.getElementById("cart-total-final").innerText = total.toLocaleString() + "đ";
+document.getElementById("checkout-price").innerText = total.toLocaleString() + "đ";
+
 });
 
 window.updateQty = function(id, qty) {
@@ -194,5 +208,25 @@ window.removeItem = function(id) {
 window.goBack = function() {
     window.history.back();
 }
+window.addSuggestItem = function(id, name, price, image) {
+    const itemRef = ref(db, "cart/user1/" + id);
+
+    onValue(itemRef, snapshot => {
+        if (snapshot.exists()) {
+            update(itemRef, {
+                quantity: snapshot.val().quantity + 1
+            });
+        } else {
+            set(itemRef, {
+                name,
+                price,
+                image,
+                quantity: 1,
+                type: "suggest"
+            });
+        }
+    }, { onlyOnce: true });
+};
+
 </script>
 </html>

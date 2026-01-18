@@ -632,3 +632,15 @@ ul{
     padding: 18px 22px;
     color: #111;
 }
+.cart-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #e4002b;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2000;
+}

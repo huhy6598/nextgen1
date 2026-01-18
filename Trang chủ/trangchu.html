@@ -14,7 +14,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="logo.png" width="300px">
+                    <img src="/Trang chủ/image/logo.png" width="300px">
                 </div>
                 <div class="search-bar">
                     <form action="#" method="get">
@@ -29,15 +29,14 @@
                       <li><a href="/Thông tin/tt.html">About</a></li>
                       <li><a href="/Liên hệ/lh.html">Contact</a></li>
                       <li><a href="/Đăng nhập , đăng ký/Đăng ký/dangky.html">Account</a></li>
-                      <li><a href="/Thời tiết/tt.html">Weather</a></li>
                   </ul>
                 </nav>
             </div>
             <div class="slider">
     <div class="slides">
-        <img src="banner1.png" class="slide active" >
-        <img src="banner2.png" class="slide">
-        <img src="banner3.png" class="slide">
+        <img src="/Trang chủ/image/banner1.png" class="slide active" >
+        <img src="/Trang chủ/image/banner2.png" class="slide">
+        <img src="/Trang chủ/image/banner3.png" class="slide">
         
     </div>
     <button class="prev">&#10094;</button>
@@ -58,31 +57,40 @@
 
         <!-- CARD -->
         <div class="product-card">
-            <img src="combo1.jpg" class="product-img">
+            <img src="/Trang chủ/image/combo1.jpg" class="product-img">
 
             <h3 class="product-name">Combo Cùng Vui</h3>
 
             <div class="product-price">
-                <span class="price-new">180.000đ</span>
-                <span class="price-old">205.000đ</span>
+                <span class="price-new">189.000đ</span>
+                <span class="price-old">209.000đ</span>
             </div>
 
             <p class="product-desc">
                 Combo 6 miếng gà rán + tặng 3 lon Pepsi
             </p>
 
-            <button class="btn-add">Thêm</button>
+            <button class="btn-add"
+onclick="addToCart(
+    'combo1',
+    'Combo Cùng Vui',
+    189000,
+    '/Trang chủ/image/combo1.jpg'
+)">
+Thêm
+</button>
+
         </div>
 
         <!-- CARD -->
         <div class="product-card">
-            <img src="combo2.jpg" class="product-img">
+            <img src="/Trang chủ/image/combo2.jpg" class="product-img">
 
             <h3 class="product-name">Combo Cùng Tiệc</h3>
 
             <div class="product-price">
                 <span class="price-new">245.000đ</span>
-                <span class="price-old">300.000đ</span>
+                <span class="price-old">310.000đ</span>
             </div>
 
             <p class="product-desc">
@@ -92,33 +100,33 @@
             <button class="btn-add">Thêm</button>
         </div>
          <div class="product-card">
-            <img src="combo1.jpg" class="product-img">
+            <img src="/Trang chủ/image/combo3.jpg" class="product-img">
 
-            <h3 class="product-name">Combo Cùng Vui</h3>
+            <h3 class="product-name">Combo buổi sáng</h3>
 
             <div class="product-price">
-                <span class="price-new">180.000đ</span>
-                <span class="price-old">205.000đ</span>
+                <span class="price-new">19.000đ</span>
+                <span class="price-old">30.000đ</span>
             </div>
 
             <p class="product-desc">
-                Combo 6 miếng gà rán + tặng 3 lon Pepsi
+                Combo 1 bánh mì trứng + 1 sữa đậu
             </p>
 
             <button class="btn-add">Thêm</button>
         </div>
          <div class="product-card">
-            <img src="combo1.jpg" class="product-img">
+            <img src="/Trang chủ/image/combo4.jpg" class="product-img">
 
-            <h3 class="product-name">Combo Cùng Vui</h3>
+            <h3 class="product-name">Combo healthy</h3>
 
             <div class="product-price">
-                <span class="price-new">180.000đ</span>
-                <span class="price-old">205.000đ</span>
+                <span class="price-new">15.000đ</span>
+                <span class="price-old">25.000đ</span>
             </div>
 
             <p class="product-desc">
-                Combo 6 miếng gà rán + tặng 3 lon Pepsi
+                Combo 1 salad + trà xanh
             </p>
 
             <button class="btn-add">Thêm</button>
@@ -132,28 +140,36 @@
     <div class="category-grid">
 
         <div class="category-card">
-            <a href="/Thông tin sản phẩm/Đồ ăn/banhmi.html">
-            <img src="garan.jpg"></a>
+            <a href="/danh mục/html/danhmuc.html#garan">
+            <img src="/Trang chủ/image/garan.jpg"></a>
             <p>Gà Rán - Gà Quay ›</p>
         </div>
 
         <div class="category-card">
-            <img src="burger.jpg">
+            <a href="/danh mục/html/danhmuc.html#banhmi">
+            <img src="/Trang chủ/image/banhmi.jpg">
+                </a>
             <p>Bánh mì ›</p>
         </div>
 
         <div class="category-card">
-            <img src="thucannhe.jpg">
+            <a href="/danh mục/html/danhmuc.html#thucannhe">
+             <img src="/Trang chủ/image/doan.jpg">
+            </a>
             <p>Thức Ăn Nhẹ ›</p>
         </div>
 
         <div class="category-card">
-            <img src="trangmieng.jpg">
+            <a href="/danh mục/html/danhmuc.html#douong">
+            <img src="/Trang chủ/image/douong.jpg">
+            </a>
             <p>Đồ uống›</p>
         </div>
 
     </div>
 </div>
+
+
 
 
 </div>
@@ -174,7 +190,7 @@
                             <i class='bx bxs-star'></i>
                             <i class='bx bx-star' ></i>
                         </div>
-                        <img src="p1.jpg">
+                        <img src="/Trang chủ/image/p1.jpg">
                         <h3>Nguyễn Thái An</h3>
                     </div>
                     <div class="col-3">
@@ -189,7 +205,7 @@
                             <i class='bx bxs-star'></i>
                             <i class='bx bx-star' ></i>
                         </div>
-                        <img src="p2.jpg">
+                        <img src="/Trang chủ/image/p2.jpg">
                         <h3>Trần Bảo Uyên</h3>
                     </div>
                     <div class="col-3">
@@ -204,7 +220,7 @@
                             <i class='bx bxs-star'></i>
                             <i class='bx bx-star' ></i>
                         </div>
-                        <img src="p3.jpg">
+                        <img src="/Trang chủ/image/p3.jpg">
                         <h3>Phạm Thành Trung</h3>
                     </div>
                 </div>
@@ -215,23 +231,26 @@
                 <div class="row">
                     <div class="col-5">
                         <a href="https://food.grab.com/vn/vi/">
-                        <img src="grab-removebg-preview.png">
+                        <img src="/Trang chủ/image/grab-removebg-preview.png">
                         </a>
                     </div>
                     <div class="col-5">
                         <a href="https://gofood.vn/">
-                        <img src="gojek-removebg-preview.png">
+                        <img src="/Trang chủ/image/gojek-removebg-preview.png">
                         </a>
                     </div>
                     <div class="col-5">
                         <a href="https://shopeefood.vn/">
-                        <img src="shoppe-removebg-preview.png">
+                        <img src="/Trang chủ/image/shoppe-removebg-preview.png">
                         </a>
                     </div>
                 </div>
            </div>
       </div>
-      
+      <div class="cart-icon" onclick="goToCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+
 
       <div class="footer">
            <div class="container">
@@ -240,12 +259,12 @@
                         <h3>Download our app</h3>
                         <p>Download App for Android and Ios mobile phone</p>
                         <div class="app-logo">
-                            <img class="playstore" src="play-store-logo-33874.png" width="140px">
-                            <img class="appstore" src="app-store-png-logo-33116.png" width="200px">
+                            <img class="playstore" src="/Trang chủ/image/play-store-logo-33874.png" width="140px">
+                            <img class="appstore" src="/Trang chủ/image/app-store-png-logo-33116.png" width="200px">
                         </div>
                     </div>
                     <div class="footer-col-2">
-                        <img src="logo.png" width="300px">
+                        <img src="/Trang chủ/image/logo.png" width="300px">
                         <p>Our purpose is to sutainanly make the pleasure</p>
                     </div>
                     <div class="footer-col-3">
@@ -272,4 +291,59 @@
     </body>
     <script src="timkiem.js"></script>
     <script src="slider.js"></script>
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, set, onValue, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAM97h4SZzzqF-mCbcnqQGk4zVjPFvtvy8",
+  authDomain: "fir-893ff.firebaseapp.com",
+  databaseURL: "https://fir-893ff-default-rtdb.firebaseio.com",
+  projectId: "fir-893ff",
+  storageBucket: "fir-893ff.firebasestorage.app",
+  messagingSenderId: "583333167187",
+  appId: "1:583333167187:web:c3cc99f7631411cdd0c6a6"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const cartRef = ref(db, "cart/user1");
+
+/* ========== THÊM VÀO GIỎ ========== */
+window.addToCart = function(id, name, price, image) {
+    const itemRef = ref(db, "cart/user1/" + id);
+
+    onValue(itemRef, snap => {
+        if (snap.exists()) {
+            update(itemRef, {
+                quantity: snap.val().quantity + 1
+            });
+        } else {
+            set(itemRef, {
+                name,
+                price,
+                image,
+                quantity: 1
+            });
+        }
+    }, { onlyOnce: true });
+}
+
+/* ========== ĐẾM SỐ SP TRONG GIỎ ========== */
+const cartCount = document.getElementById("cart-count");
+
+onValue(cartRef, snapshot => {
+    let count = 0;
+    snapshot.forEach(child => {
+        count += child.val().quantity;
+    });
+    cartCount.innerText = count;
+});
+
+/* ========== ĐI TỚI GIỎ HÀNG ========== */
+window.goToCart = function() {
+    window.location.href = "/Giỏ hàng/html/giohang.html";
+}
+</script>
+
 </html>

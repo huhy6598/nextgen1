@@ -1,12 +1,6 @@
 const products = [
-    { name: "Strawberry ice cream", price: "20.000 VND", url: "/Thông tin sản phẩm/Kem Dâu/icecream.html", image: "cat1.jpg" },
-    { name: "Bubble tea", price: "30.000 VND", url: "/Thông tin sản phẩm/Trà sữa/b_tea.html", image: "buble tea.jpg" },
-    { name: "Strawberry soda", price: "15.000 VND", url: "/Thông tin sản phẩm/Soda/Soda.html", image: "soda.jpg" },
-    { name: "Peach tea", price: "50.000 VND", url: "/Thông tin sản phẩm/Trà đào/p_tea.html", image: "peach tea.jpg" },
-    { name: "Cappuccino", price: "30.000 VND", url: "/Thông tin sản phẩm/cafe/capu.html", image: "capuchino.jpg" },
-    { name: "Matcha soda", price: "15.000 VND", url: "/Thông tin sản phẩm/Soda matcha/Soda_m.html", image: "matcha soda.jpg" },
-    { name: "Sea salt coffee", price: "40.000 VND", url: "/Thông tin sản phẩm/cafe muối/cf_s.html", image: "coffe.jpg" },
-    { name: "Egg coffee", price: "50.000 VND", url: "/Thông tin sản phẩm/cafe trứng/cf_e.html", image: "egg.jpg" },
+    { name: "Gà rán", price: "35.000 VND", url: "/danh mục/html/danhmuc.html#garan", image: "/danh mục/image/garan2.jpg" }
+   
 ];
 // Hàm xử lý tìm kiếm
 function searchProducts() {

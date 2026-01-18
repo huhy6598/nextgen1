@@ -189,6 +189,12 @@ p{
     text-align: center;
     position: relative;
 }
+.suggest-item img {
+    width: 100%;
+    height: 90px;
+    object-fit: contain; /* QUAN TRỌNG */
+    border-radius: 8px;
+}
 
 .suggest-item button {
     position: absolute;
@@ -201,6 +207,7 @@ p{
     width: 26px;
     height: 26px;
 }
+
 
 /* CỘT PHẢI */
 .cart-right {
